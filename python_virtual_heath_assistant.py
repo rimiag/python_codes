@@ -9,6 +9,10 @@ def getdate():
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     return dt_string
 
+def eyes():
+    playsound.playsound('eyes.mp3')
+def workout():
+    playsound.playsound('physical.mp3')
 def drink_water():
  while True:
     playsound.playsound('water.mp3')
@@ -23,6 +27,8 @@ f.close()
 
 print("Welocme to Health concern ")
 schedule.every(1).minutes.do(drink_water)
+schedule.every(1).minutes.do(eyes)
+schedule.every(2).minutes.do(workout)
 while True:
  # Checks whether a scheduled task
  # is pending to run or not
