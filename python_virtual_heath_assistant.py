@@ -26,9 +26,9 @@ f.write(f"{getdate()} ")
 f.close()
 
 print("Welocme to Health concern ")
-schedule.every(1).minutes.do(drink_water)
-schedule.every(1).minutes.do(eyes)
-schedule.every(2).minutes.do(workout)
+schedule.every(120).minutes.do(drink_water)
+schedule.every(30).minutes.do(eyes)
+schedule.every(200).minutes.do(workout)
 while True:
  # Checks whether a scheduled task
  # is pending to run or not
